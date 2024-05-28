@@ -155,7 +155,7 @@ export const Home = ({ location }) => {
           <About />
         </div>
 
-        <div ref={skillsRef} id="skills" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start md:items-center">
+        <div ref={skillsRef} id="skills" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start items-center">
           <Skills />
         </div>
 
