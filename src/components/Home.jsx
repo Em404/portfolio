@@ -6,6 +6,7 @@ import {Contacts} from "../components/Contacts"
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom';
 import profilePic from '../img/Emanuele-Macchiarulo-Sviluppatore-React.png'
+import { motion } from "framer-motion"
 
 export const Home = ({ location }) => {
   const homeRef = useRef(null);
@@ -43,12 +44,42 @@ export const Home = ({ location }) => {
     }
   }, [location]);
 
+  const fadeInDownAnimation = {
+    initial: {
+      opacity: 0, 
+      y: -100
+    },
+    animate: {
+      opacity: 1, 
+      y: 0
+    }
+  }
+
+  const fadeInUpAnimation = {
+    initial: {
+      opacity: 0, 
+      y: 100
+    },
+    animate: {
+      opacity: 1, 
+      y: 0
+    }
+  }
+
   return (
     <Fragment>
       <div ref={homeRef} className='bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 h-[100vh] flex items-start pt-32 md:pt-0 md:items-center'>
         <div className='container mx-auto px-8 md:px-32 lg:px-48'>
           <div className='grid grid-cols-1 lg:grid-cols-2'>
-            <div className='font-semibold text-xl md:text-2xl lg:text-4xl self-center'>
+            <motion.div
+              variants={fadeInDownAnimation}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true
+              }}
+              transition={{duration: 1, ease: "easeOut", delay: 0.2}}
+              className='font-semibold text-xl md:text-2xl lg:text-4xl self-center'>
               <div className='mb-16 text-left'>
                 <p className=''>Ciao!</p>
                 <p>Sono <span className='text-purple-900'>Emanuele</span>,</p>
@@ -101,30 +132,38 @@ export const Home = ({ location }) => {
                     </svg>
                   </a>
               </div>
-            </div>
+            </motion.div>
             {/* profile pic desktop */}
-            <div className='justify-self-center self-center hidden lg:block'>
+            <motion.div 
+               variants={fadeInUpAnimation}
+               initial="initial"
+               whileInView="animate"
+               viewport={{
+                 once: true
+               }}
+               transition={{duration: 1, ease: "easeOut", delay: 0.2}}
+              className='justify-self-center self-center hidden lg:block'>
               <div className='w-[24rem]'>
                 <img src={profilePic} alt="Emanuele-Macchiarulo-Sviluppatore-React" loading='lazy' className='custom-drop-shadow'/>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
       
-      <div ref={aboutRef} id="about" className="pt-20 text-center container mx-auto px-4 md:px-8 lg:px-16">
+      <div ref={aboutRef} id="about" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start md:items-center">
           <About />
         </div>
 
-        <div ref={skillsRef} id="skills" className="pt-20 text-center container mx-auto px-4 md:px-8 lg:px-16">
+        <div ref={skillsRef} id="skills" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start md:items-center">
           <Skills />
         </div>
 
-        <div ref={projectsRef} id="projects" className="text-center container mx-auto px-4 md:px-8 lg:px-16">
+        <div ref={projectsRef} id="projects" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start md:items-center">
           <Projects />
         </div>
 
-        <div ref={contattiRef} id="contatti" className="text-center container mx-auto px-4 md:px-8 lg:px-16">
+        <div ref={contattiRef} id="contatti" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start md:items-center">
           <Contacts />
         </div>
     </Fragment>
