@@ -28,7 +28,7 @@ export const About = () => {
 
   return (
     <Fragment>
-      <div className='container mx-auto px-8 md:px-32 lg:px-48 py-4'>
+      <div className='container mx-auto px-8 md:px-32 lg:px-48 py-4 lg:py-16 bg-purple-900 lg:rounded-3xl custom-box-shadow'>
         <motion.h2
           variants={fadeInDownAnimation}
           initial="initial"
@@ -37,7 +37,7 @@ export const About = () => {
             once: true
           }}
           transition={{duration: 1, ease: "easeOut", delay: 0.2}}
-          className='text-2xl md:text-4xl lg:text-5xl font-bold text-center lg:text-left text-purple-900 dark:text-neutral-100 mb-4'>Su di me</motion.h2>
+          className='text-2xl md:text-4xl lg:text-5xl font-bold text-center lg:text-left text-neutral-100 mb-4'>Su di me</motion.h2>
         <div className='grid grid-cols-1 md:grid-cols-2 sm:gap-0 md:gap-16 lg:gap-0 mt-8 lg:mt-16'>
           <motion.div 
             variants={fadeInDownAnimation}
@@ -49,7 +49,7 @@ export const About = () => {
             transition={{duration: 1, ease: "easeOut", delay: 0.2}}
             className='self-center justify-self-center lg:justify-self-start'>
             <div className='w-[16rem] lg:w-[24rem]'>
-              <img src={profilePic} alt="Emanuele-Macchiarulo-Sviluppatore-React" loading='lazy' className='custom-drop-shadow'/>
+              <img src={profilePic} alt="Emanuele-Macchiarulo-Sviluppatore-React" loading='lazy' className=''/>
             </div>
           </motion.div>
           <motion.div 
@@ -62,7 +62,7 @@ export const About = () => {
             transition={{duration: 1, ease: "easeOut", delay: 0.2}}
             className='text-center md:text-left text-xl mt-8 lg:mt-0 flex flex-col'>
             <h3>Ciao a tutti!</h3>
-            <p>Sono un Front End Developer con competenze in <span className='text-purple-900 font-bold'>React</span>.</p>
+            <p>Sono un Front End Developer con competenze in <span className='font-bold'>React</span>.</p>
             <p>Mi ritengo una persona precisa, organizzata, con buone capacità di problem solving e in grado di lavorare sia in autonomia che in gruppo mostrando adattabilità e flessibilità.</p>
             <div className='md:hidden lg:block'>
               <p className='mt-4'>💭 Sempre alla ricerca di nuovi stimoli e opportunità per crescere sia come professionista che come persona. 🤝</p>

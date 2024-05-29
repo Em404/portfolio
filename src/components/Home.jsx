@@ -68,7 +68,7 @@ export const Home = ({ location }) => {
 
   return (
     <Fragment>
-      <div ref={homeRef} className='bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 h-[100vh] flex items-start pt-32 md:pt-0 md:items-center'>
+      <div ref={homeRef} className='bg-neutral-50 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 h-[100vh] flex items-start pt-32 md:pt-0 md:items-center'>
         <div className='container mx-auto px-8 md:px-32 lg:px-48'>
           <div className='grid grid-cols-1 lg:grid-cols-2'>
             <motion.div
@@ -151,11 +151,11 @@ export const Home = ({ location }) => {
         </div>
       </div>
       
-      <div ref={aboutRef} id="about" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start md:items-center">
+      <div ref={aboutRef} id="about" className="bg-neutral-100 dark:bg-neutral-800 text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start md:items-center">
           <About />
         </div>
 
-        <div ref={skillsRef} id="skills" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start items-center">
+        <div ref={skillsRef} id="skills" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-center">
           <Skills />
         </div>
 

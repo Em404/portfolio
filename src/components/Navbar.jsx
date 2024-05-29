@@ -150,7 +150,7 @@ export const Navbar = ({ darkMode, handleDarkMode }) => {
   return (
     <Fragment>
       {/* Desktop Navbar */}
-      <div className='hidden lg:block dark:bg-neutral-800 dark:text-neutral-100 bg-neutral-100 text-neutral-800'>
+      <div className='hidden lg:block dark:bg-neutral-800 dark:text-neutral-100 bg-neutral-50 text-neutral-800'>
         {desktopNavbar()}
       </div>
    
