@@ -107,7 +107,7 @@ export const Skills = () => {
                     <motion.div
                       variants={fadeInUpAnimation}
                       initial='initial'
-                      animate='animate'
+                      whileInView='animate'
                       viewport={{
                         once: true
                       }}
