@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { motion } from "framer-motion"
+import { delay, motion } from "framer-motion"
 import htmlIcon from "../icons/file-type-html.svg"
 import cssIcon from "../icons/file-type-css.svg"
 import jsIcon from "../icons/javascript-js.svg"
@@ -28,9 +28,14 @@ export const Skills = () => {
       opacity: 0, 
       y: 100
     },
-    animate: {
-      opacity: 1, 
-      y: 0
+    animate:  (index) => {
+      return{
+        opacity: 1, 
+        y: 0,
+        transition: {
+          delay: 0.3 * index,
+        },
+      }
     }
   }
 
@@ -94,15 +99,23 @@ export const Skills = () => {
               once: true
             }}
             transition={{duration: 1, ease: "easeOut", delay: 0.2}}
-            className='text-2xl md:text-4xl lg:text-5xl font-bold text-center lg:text-left text-purple-900 dark:text-neutral-100 mb-8'>Skills</motion.h2>
+            className='text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left text-purple-900 dark:text-neutral-100 mb-8 md:mb-16'>Skills</motion.h2>
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-8'>
               {
                 icons.map((icon, index) => {
                   return (
-                    <div key={index} className='flex flex-col items-center'>
-                      <img src={icon.icon} alt={icon.name} className="w-12 h-12"/>
-                      <h3 className='mt-2 font-semibold text-xl'>{icon.name}</h3>
-                    </div>
+                    <motion.div
+                      variants={fadeInUpAnimation}
+                      initial='initial'
+                      animate='animate'
+                      viewport={{
+                        once: true
+                      }}
+                      custom={index}
+                      key={index} className='flex flex-col items-center'>
+                      <img src={icon.icon} alt={icon.name} className="w-12 lg:w-16 h-12 lg:h-16"/>
+                      <h3 className='mt-2 font-semibold md:text-lg'>{icon.name}</h3>
+                    </motion.div>
                   )
                 })
               }

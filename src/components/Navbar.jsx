@@ -73,7 +73,7 @@ export const Navbar = ({ darkMode, handleDarkMode }) => {
             {
               navItems.map((link, index) => {
                 return (
-                <li key={index} className='hover:scale-110 duration-300 font-semibold text-xl lg:text-purple-900 dark:text-neutral-100'>
+                <li key={index} className='hover:scale-110 duration-300 font-semibold dark:text-neutral-100 lg:text-lg'>
                   <Link to={link.path}>{link.name}</Link>
                 </li>
                 )
@@ -150,7 +150,7 @@ export const Navbar = ({ darkMode, handleDarkMode }) => {
   return (
     <Fragment>
       {/* Desktop Navbar */}
-      <div className='hidden lg:block dark:bg-neutral-800 dark:text-neutral-100 bg-neutral-50 text-neutral-800'>
+      <div className='hidden lg:block dark:bg-neutral-800 dark:text-neutral-100 bg-neutral-100 text-purple-900'>
         {desktopNavbar()}
       </div>
    

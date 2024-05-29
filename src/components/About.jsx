@@ -28,7 +28,9 @@ export const About = () => {
 
   return (
     <Fragment>
-      <div className='container mx-auto px-8 md:px-32 lg:px-48 py-4 lg:py-16 bg-purple-900 lg:rounded-3xl custom-box-shadow'>
+      <div className='container mx-auto px-8 md:px-32 lg:px-48 py-8 md:py-16 lg:py-16 bg-purple-900 lg:rounded-3xl custom-box-shadow'>
+
+        {/* H2 */}
         <motion.h2
           variants={fadeInDownAnimation}
           initial="initial"
@@ -37,8 +39,12 @@ export const About = () => {
             once: true
           }}
           transition={{duration: 1, ease: "easeOut", delay: 0.2}}
-          className='text-2xl md:text-4xl lg:text-5xl font-bold text-center lg:text-left text-neutral-100 mb-4'>Su di me</motion.h2>
-        <div className='grid grid-cols-1 md:grid-cols-2 sm:gap-0 md:gap-16 lg:gap-0 mt-8 lg:mt-16'>
+          className='text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left text-neutral-100 mb-4 md:mb-8 lg:mb-4'>Su di me
+        </motion.h2>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16 lg:gap-0'>
+
+          {/* pic */}
           <motion.div 
             variants={fadeInDownAnimation}
             initial="initial"
@@ -47,11 +53,13 @@ export const About = () => {
               once: true
             }}
             transition={{duration: 1, ease: "easeOut", delay: 0.2}}
-            className='self-center justify-self-center lg:justify-self-start'>
-            <div className='w-[16rem] lg:w-[24rem]'>
+            className='self-center justify-self-center lg:justify-self-start mb-4'>
+            <div className='w-[16rem] xl:w-[24rem]'>
               <img src={profilePic} alt="Emanuele-Macchiarulo-Sviluppatore-React" loading='lazy' className=''/>
             </div>
           </motion.div>
+
+          {/* about */}
           <motion.div 
             variants={fadeInUpAnimation}
             initial="initial"
@@ -60,7 +68,7 @@ export const About = () => {
               once: true
             }}
             transition={{duration: 1, ease: "easeOut", delay: 0.2}}
-            className='text-center md:text-left text-xl mt-8 lg:mt-0 flex flex-col'>
+            className='text-center md:text-left lg:mt-0 flex flex-col'>
             <h3>Ciao a tutti!</h3>
             <p>Sono un Front End Developer con competenze in <span className='font-bold'>React</span>.</p>
             <p>Mi ritengo una persona precisa, organizzata, con buone capacità di problem solving e in grado di lavorare sia in autonomia che in gruppo mostrando adattabilità e flessibilità.</p>
@@ -75,6 +83,8 @@ export const About = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* about section md */}
         <motion.div
           variants={fadeInUpAnimation}
           initial="initial"
@@ -83,7 +93,7 @@ export const About = () => {
             once: true
           }}
           transition={{duration: 1, ease: "easeOut", delay: 0.2}}
-          className='text-xl hidden md:block lg:hidden'>
+          className='text-lg hidden md:block lg:hidden'>
               <p className='mt-4'>💭 Sempre alla ricerca di nuovi stimoli e opportunità per crescere sia come professionista che come persona. 🤝</p>
               <p className='mt-4'>Appassionato di:</p>
               <ul>
