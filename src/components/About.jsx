@@ -39,7 +39,7 @@ export const About = () => {
             once: true
           }}
           transition={{duration: 1, ease: "easeOut", delay: 0.2}}
-          className='text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left text-neutral-100 mb-4 md:mb-8 lg:mb-4'>Su di me
+          className='text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left text-neutral-50 mb-4 md:mb-8 lg:mb-4'>Su di me
         </motion.h2>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16 lg:gap-0'>

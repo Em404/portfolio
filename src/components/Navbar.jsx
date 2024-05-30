@@ -1,5 +1,6 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom';
+import logo from '../img/logo-em.png'
 
 export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
 
@@ -65,7 +66,11 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
     return(
       <div className='container mx-auto px-48 py-8 flex justify-between items-center'>
         <div>
-          <Link to='/home'>Logo</Link>
+          <Link to='/home'>
+            <div className='w-24'>
+              <img src={logo} alt="logo-emanuele-macchiarulo"/>
+            </div>
+          </Link>
         </div>
         <div className='flex gap-4 items-center'>
           <div>
@@ -73,7 +78,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
             {
               navItems.map((link, index) => {
                 return (
-                <li key={index} className='hover:scale-110 duration-300 font-semibold dark:text-neutral-100 lg:text-lg'>
+                <li key={index} className='hover:scale-110 duration-300 font-semibold dark:text-neutral-50 lg:text-lg'>
                   <Link to={link.path} onClick={() => setcliCkedLink(true)}>{link.name}</Link>
                 </li>
                 )
@@ -82,7 +87,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
             </ul>
           </div>
           <div className='flex items-center'>
-            <button className='bg-purple-900 rounded-lg text-neutral-100' onClick={handleDarkMode}>
+            <button className='bg-purple-900 rounded-lg text-neutral-50' onClick={handleDarkMode}>
               {
                 darkMode ? iconMoon : iconSun
               }
@@ -98,7 +103,11 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
       <Fragment>
         <div className='container mx-auto px-8 md:px-32 py-4 flex justify-between items-center'>
           <div>
-            <Link to='/home'>Logo</Link>
+            <Link to='/home'>
+              <div className='w-16'>
+                <img src={logo} alt="logo-emanuele-macchiarulo"/>
+              </div>
+            </Link>
           </div>
           <div>
             <button onClick={handleNavbar}>
@@ -108,13 +117,13 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
             </button>
           </div>
         </div>
-        <div className={navbar ? "fixed lg:hidden left-0 top-0 w-[80%] h-full ease-in-out duration-500 bg-purple-900 text-neutral-100" : "ease-in-out w-[80%] duration-500 fixed top-0 bottom-0 left-[-100%]"}>
+        <div className={navbar ? "fixed lg:hidden left-0 top-0 w-[80%] h-full ease-in-out duration-500 bg-purple-900 text-neutral-50" : "ease-in-out w-[80%] duration-500 fixed top-0 bottom-0 left-[-100%]"}>
           {/* Mobile Navigation Items */}
           <ul className="text-neutral-100 h-full mt-8">
             {navItems.map((item) => (
               <li
                 key={item.id}
-                className="px-4 py-2 duration-300 text-neutral-100"
+                className="px-4 py-2 duration-300 text-neutral-50"
                 onClick={() => setNavbar(false)}
               >
                 <Link to={item.path}>{item.name}</Link>
@@ -122,7 +131,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
             ))}
             <li className='px-4 py-2'>
               
-              <button className='text-neutral-100 flex items-center gap-2 duration-300' onClick={handleDarkMode}>Cambia tema
+              <button className='text-neutral-50 flex items-center gap-2 duration-300' onClick={handleDarkMode}>Cambia tema
                 {
                   darkMode ? iconMoon : iconSun
                 }
@@ -150,12 +159,12 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
   return (
     <Fragment>
       {/* Desktop Navbar */}
-      <div className='hidden lg:block dark:bg-neutral-800 dark:text-neutral-100 bg-neutral-100 text-purple-900'>
+      <div className='hidden lg:block dark:bg-neutral-800 dark:text-neutral-50 bg-neutral-50 text-purple-900'>
         {desktopNavbar()}
       </div>
    
       {/* Mobile Navbar */}
-      <div className='block lg:hidden dark:bg-neutral-800 dark:text-neutral-100 bg-neutral-100 text-neutral-800'>
+      <div className='block lg:hidden dark:bg-neutral-800 dark:text-neutral-50 bg-neutral-50 text-neutral-800'>
         {mobileNavbar()}
       </div>
     </Fragment>

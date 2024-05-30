@@ -1,91 +1,79 @@
-import React, { Fragment, useRef, useEffect, useState } from 'react'
+import React, { Fragment, useRef, useEffect } from 'react'
 import {About} from "../components/About"
 import {Skills} from "../components/Skills"
 import {Projects} from "../components/Projects"
 import {Contacts} from "../components/Contacts"
 import { TypeAnimation } from 'react-type-animation';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import profilePic from '../img/Emanuele-Macchiarulo-Sviluppatore-React.png'
 import { motion } from "framer-motion"
-import useOnScreen from "../hoooks/useOnScreen"
+import { useLocation } from 'react-router-dom';
 
-export const Home = ({ location, clickedLink ,setcliCkedLink}) => {
+export const Home = ({ clickedLink, setcliCkedLink }) => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactsRef = useRef(null);
-
-  // const isVisibleHome = useOnScreen(homeRef)
-  // const isVisibleAbout = useOnScreen(aboutRef)
-  // const isVisibleSkills = useOnScreen(skillsRef)
-  // const isVisibleProjects = useOnScreen(projectsRef)
-  // const isVisibleContacts = useOnScreen(contactsRef)
-  // const navigate = useNavigate()
+  const location = useLocation();
 
   // useEffect(() => {
-  //   console.log(clickedLink);
-  //   if(!clickedLink) {
-  //     switch (true) {
-  //       case isVisibleHome: {
-  //         navigate('/home')
-  //         break;
-  //       }
-  //       case isVisibleAbout: {
-  //         navigate('/about')
-  //         break;
-  //       }
-  //       case isVisibleSkills: {
-  //         navigate('/skills')
-  //         break;
-  //       }
-  //       case isVisibleProjects: {
-  //         navigate('/projects')
-  //         break;
-  //       }
-  //       case isVisibleContacts: {
-  //         navigate('/contacts')
-  //         break;
-  //       }
-  //       default: {
-  //         navigate('/home')
-  //       }
+  //   console.log(location);
+  //   switch (location) {
+  //     case "home": {
+  //       homeRef.current.scrollIntoView({ behavior: "smooth" });
+  //       break;
+  //     }
+  //     case "about": {
+  //       aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  //       break;
+  //     }
+  //     case "skills": {
+  //       skillsRef.current.scrollIntoView({ behavior: "smooth" });
+  //       break;
+  //     }
+  //     case "projects": {
+  //       projectsRef.current.scrollIntoView({ behavior: "smooth" });
+  //       break;
+  //     }
+  //     case "contacts": {
+  //       contactsRef.current.scrollIntoView({ behavior: "smooth" });
+  //       break;
+  //     }
+  //     default: {
+  //       homeRef.current.scrollIntoView({ behavior: "smooth" });
   //     }
   //   }
-  // }, [isVisibleHome, isVisibleSkills, isVisibleAbout, isVisibleProjects, isVisibleContacts, clickedLink, navigate])
+  // }, [location]);
+
+  const scrollToSection = (sectionRef) => {
+    sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   useEffect(() => {
-    console.log(location);
-    switch (location) {
-      case "home": {
-        homeRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      }
-      case "about": {
-        aboutRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      }
-      case "skills": {
-        skillsRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      }
-      case "projects": {
-        projectsRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      }
-      case "contacts": {
-        contactsRef.current.scrollIntoView({ behavior: "smooth" });
-        break;
-      }
-      default: {
-        homeRef.current.scrollIntoView({ behavior: "smooth" });
+    if (clickedLink) {
+      setcliCkedLink(false);
+      switch (location.pathname) {
+        case "/home":
+          scrollToSection(homeRef);
+          break;
+        case "/about":
+          scrollToSection(aboutRef);
+          break;
+        case "/skills":
+          scrollToSection(skillsRef);
+          break;
+        case "/projects":
+          scrollToSection(projectsRef);
+          break;
+        case "/contacts":
+          scrollToSection(contactsRef);
+          break;
+        default:
+          break;
       }
     }
-  }, [location]);
-
-  // useEffect(() => {
-  //   if(clickedLink) setcliCkedLink(false);
-  // }, [clickedLink, setcliCkedLink])
+  }, [clickedLink, location, setcliCkedLink]);
 
   const fadeInDownAnimation = {
     initial: {
@@ -111,7 +99,7 @@ export const Home = ({ location, clickedLink ,setcliCkedLink}) => {
 
   return (
     <Fragment>
-      <div ref={homeRef} className='bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 h-[100vh] flex items-start pt-24 md:pt-8 md:items-center'>
+      <div ref={homeRef} className='bg-neutral-50 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 h-[100vh] flex items-start pt-24 md:pt-8 md:items-center'>
         <div className='container mx-auto px-8 md:px-32 lg:px-48'>
           <div className='grid grid-cols-1 lg:grid-cols-2'>
             <motion.div
@@ -154,10 +142,10 @@ export const Home = ({ location, clickedLink ,setcliCkedLink}) => {
 
               {/* buttons - contacts and cv */}
               <div className='mb-16 md:mb-8 lg:mb-16 flex flex-col justify-center lg:justify-start'>
-               <button className='bg-purple-900 text-neutral-100 rounded-lg text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 mb-4 md:mx-32 lg:ms-0 lg:me-32' ref={contactsRef} id="contatti">
+               <button className='bg-purple-900 text-neutral-50 rounded-lg text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 mb-4 md:mx-32 lg:ms-0 lg:me-32' ref={contactsRef} id="contatti">
                  <Link to='/contacts'>Contattami!</Link>
                </button>
-               <button className='bg-purple-900 text-neutral-100 rounded-lg text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 md:mx-32 lg:ms-0 lg:me-32' ref={contactsRef} id="contatti">
+               <button className='bg-purple-900 text-neutral-50 rounded-lg text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 md:mx-32 lg:ms-0 lg:me-32' ref={contactsRef} id="contatti">
                  <Link to='/contatti'>Scarica il mio CV!</Link>
                </button>
               </div>
@@ -194,20 +182,24 @@ export const Home = ({ location, clickedLink ,setcliCkedLink}) => {
         </div>
       </div>
       
-      <div ref={aboutRef} id="about" className="bg-neutral-100 dark:bg-neutral-800 text-neutral-100 py-16 lg:py-24 lg:px-4 h-[100vh] flex items-start md:items-center">
+      <div ref={aboutRef} id="about" className="bg-neutral-50 dark:bg-neutral-800 text-neutral-50 py-16 lg:py-24 lg:px-4 h-[100vh] flex items-start md:items-center">
           <About />
         </div>
 
-        <div ref={skillsRef} id="skills" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-center">
+        <div ref={skillsRef} id="skills" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 py-16 lg:py-24 h-[100vh] flex items-center">
           <Skills />
         </div>
 
-        <div ref={projectsRef} id="projects" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 flex items-start md:items-center">
+        <div ref={projectsRef} id="projects" className="bg-neutral-50 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 py-16 lg:py-24 flex items-start md:items-center">
           <Projects />
         </div>
 
-        <div ref={contactsRef} id="contatti" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start md:items-center">
+        <div ref={contactsRef} id="contatti" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 pt-16 lg:pt-24 h-[90vh] flex items-center">
           <Contacts />
+        </div>
+
+        <div className='bg-purple-900 text-neutral-100 dark:bg-neutral-800 dark:text-neutral-100 h-[10vh] px-8 md:px-32 lg:px-48 flex items-center justify-center'>
+          <p className='text-center font-semibold'>Copyright © Emanuele Macchiarulo | 2024</p>
         </div>
     </Fragment>
   )

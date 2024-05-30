@@ -1,5 +1,5 @@
-import { Fragment, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Fragment, useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import './styles/App.css';
 import { Navbar } from './components/Navbar';
 import { Home } from './components/Home';
@@ -8,6 +8,12 @@ function App() {
 
   const [clickedLink, setcliCkedLink] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
+
+  // const location = useLocation();
+
+  // useEffect(() => {
+  //   setcliCkedLink(true);
+  // }, [location.pathname]);
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
