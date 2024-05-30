@@ -1,13 +1,12 @@
 import { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import logo from './logo.svg';
 import './styles/App.css';
-import { motion } from "framer-motion"
 import { Navbar } from './components/Navbar';
 import { Home } from './components/Home';
 
 function App() {
 
+  const [clickedLink, setcliCkedLink] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
 
   const handleDarkMode = () => {
@@ -19,16 +18,16 @@ function App() {
       <div className={`${darkMode && 'dark'}`}>
         <Router>
           <div className='fixed top-0 w-full z-50'>
-            <Navbar darkMode={darkMode} handleDarkMode={handleDarkMode}/>
+            <Navbar darkMode={darkMode} handleDarkMode={handleDarkMode} setcliCkedLink={setcliCkedLink}/>
           </div>
 
           <Routes>
-            <Route exact path="/" element={<Home location={"home"} />} />
-            <Route exact path="/home" element={<Home location={"home"} />} />
-            <Route exact path="/about" element={<Home location={"about"} />} />
-            <Route exact path="/skills" element={<Home location={"skills"} />} />
-            <Route exact path="/projects" element={<Home location={"projects"} />} />
-            <Route exact path="/contatti" element={<Home location={"contatti"} />} />
+            <Route exact path="/" element={<Home location={"home"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink}/>} />
+            <Route exact path="/home" element={<Home location={"home"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink}/>} />
+            <Route exact path="/about" element={<Home location={"about"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink}/>} />
+            <Route exact path="/skills" element={<Home location={"skills"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink}/>} />
+            <Route exact path="/projects" element={<Home location={"projects"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink}/>} />
+            <Route exact path="/contacts" element={<Home location={"contacts"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink}/>} />
           </Routes>
 
         </Router>

@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
-export const Navbar = ({ darkMode, handleDarkMode }) => {
+export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
 
   const [navbar, setNavbar] = useState(false)
 
@@ -33,7 +33,7 @@ export const Navbar = ({ darkMode, handleDarkMode }) => {
     {
       id: 4,
       name: "Contatti",
-      path: "contatti",
+      path: "contacts",
     }
   ];
 
@@ -74,7 +74,7 @@ export const Navbar = ({ darkMode, handleDarkMode }) => {
               navItems.map((link, index) => {
                 return (
                 <li key={index} className='hover:scale-110 duration-300 font-semibold dark:text-neutral-100 lg:text-lg'>
-                  <Link to={link.path}>{link.name}</Link>
+                  <Link to={link.path} onClick={() => setcliCkedLink(true)}>{link.name}</Link>
                 </li>
                 )
               } )

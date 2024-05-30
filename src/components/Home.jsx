@@ -1,19 +1,58 @@
-import React, { Fragment, useRef, useEffect } from 'react'
+import React, { Fragment, useRef, useEffect, useState } from 'react'
 import {About} from "../components/About"
 import {Skills} from "../components/Skills"
 import {Projects} from "../components/Projects"
 import {Contacts} from "../components/Contacts"
 import { TypeAnimation } from 'react-type-animation';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import profilePic from '../img/Emanuele-Macchiarulo-Sviluppatore-React.png'
 import { motion } from "framer-motion"
+import useOnScreen from "../hoooks/useOnScreen"
 
-export const Home = ({ location }) => {
+export const Home = ({ location, clickedLink ,setcliCkedLink}) => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
-  const contattiRef = useRef(null);
+  const contactsRef = useRef(null);
+
+  // const isVisibleHome = useOnScreen(homeRef)
+  // const isVisibleAbout = useOnScreen(aboutRef)
+  // const isVisibleSkills = useOnScreen(skillsRef)
+  // const isVisibleProjects = useOnScreen(projectsRef)
+  // const isVisibleContacts = useOnScreen(contactsRef)
+  // const navigate = useNavigate()
+
+  // useEffect(() => {
+  //   console.log(clickedLink);
+  //   if(!clickedLink) {
+  //     switch (true) {
+  //       case isVisibleHome: {
+  //         navigate('/home')
+  //         break;
+  //       }
+  //       case isVisibleAbout: {
+  //         navigate('/about')
+  //         break;
+  //       }
+  //       case isVisibleSkills: {
+  //         navigate('/skills')
+  //         break;
+  //       }
+  //       case isVisibleProjects: {
+  //         navigate('/projects')
+  //         break;
+  //       }
+  //       case isVisibleContacts: {
+  //         navigate('/contacts')
+  //         break;
+  //       }
+  //       default: {
+  //         navigate('/home')
+  //       }
+  //     }
+  //   }
+  // }, [isVisibleHome, isVisibleSkills, isVisibleAbout, isVisibleProjects, isVisibleContacts, clickedLink, navigate])
 
   useEffect(() => {
     console.log(location);
@@ -34,8 +73,8 @@ export const Home = ({ location }) => {
         projectsRef.current.scrollIntoView({ behavior: "smooth" });
         break;
       }
-      case "contatti": {
-        contattiRef.current.scrollIntoView({ behavior: "smooth" });
+      case "contacts": {
+        contactsRef.current.scrollIntoView({ behavior: "smooth" });
         break;
       }
       default: {
@@ -43,6 +82,10 @@ export const Home = ({ location }) => {
       }
     }
   }, [location]);
+
+  // useEffect(() => {
+  //   if(clickedLink) setcliCkedLink(false);
+  // }, [clickedLink, setcliCkedLink])
 
   const fadeInDownAnimation = {
     initial: {
@@ -111,10 +154,10 @@ export const Home = ({ location }) => {
 
               {/* buttons - contacts and cv */}
               <div className='mb-16 md:mb-8 lg:mb-16 flex flex-col justify-center lg:justify-start'>
-               <button className='bg-purple-900 text-neutral-100 rounded-lg text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 mb-4 md:mx-32 lg:ms-0 lg:me-32' ref={contattiRef} id="contatti">
-                 <Link to='/contatti'>Contattami!</Link>
+               <button className='bg-purple-900 text-neutral-100 rounded-lg text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 mb-4 md:mx-32 lg:ms-0 lg:me-32' ref={contactsRef} id="contatti">
+                 <Link to='/contacts'>Contattami!</Link>
                </button>
-               <button className='bg-purple-900 text-neutral-100 rounded-lg text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 md:mx-32 lg:ms-0 lg:me-32' ref={contattiRef} id="contatti">
+               <button className='bg-purple-900 text-neutral-100 rounded-lg text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 md:mx-32 lg:ms-0 lg:me-32' ref={contactsRef} id="contatti">
                  <Link to='/contatti'>Scarica il mio CV!</Link>
                </button>
               </div>
@@ -159,11 +202,11 @@ export const Home = ({ location }) => {
           <Skills />
         </div>
 
-        <div ref={projectsRef} id="projects" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start md:items-center">
+        <div ref={projectsRef} id="projects" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 flex items-start md:items-center">
           <Projects />
         </div>
 
-        <div ref={contattiRef} id="contatti" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start md:items-center">
+        <div ref={contactsRef} id="contatti" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 py-16 lg:py-24 h-[100vh] flex items-start md:items-center">
           <Contacts />
         </div>
     </Fragment>
