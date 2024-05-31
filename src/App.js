@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import './styles/App.css';
 import { Navbar } from './components/Navbar';
 import { Home } from './components/Home';
+import { Contacts } from './components/Contacts'
 
 function App() {
 
