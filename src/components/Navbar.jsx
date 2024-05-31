@@ -117,7 +117,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
             </button>
           </div>
         </div>
-        <div className={navbar ? "fixed lg:hidden left-0 top-0 w-[80%] h-full ease-in-out duration-500 bg-purple-900 text-neutral-50" : "ease-in-out w-[80%] duration-500 fixed top-0 bottom-0 left-[-100%]"}>
+        <div className={navbar ? "fixed lg:hidden left-0 top-0 w-[80%] h-full ease-in-out duration-500 bg-navbar-mobile text-neutral-50" : "ease-in-out w-[80%] duration-500 fixed top-0 bottom-0 left-[-100%]"}>
           {/* Mobile Navigation Items */}
           <ul className="text-neutral-100 h-full mt-8">
             {navItems.map((item) => (
@@ -126,7 +126,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
                 className="px-4 py-2 duration-300 text-neutral-50"
                 onClick={() => setNavbar(false)}
               >
-                <Link to={item.path}>{item.name}</Link>
+                <Link to={item.path}  onClick={() => setcliCkedLink(true)}>{item.name}</Link>
               </li>
             ))}
             <li className='px-4 py-2'>

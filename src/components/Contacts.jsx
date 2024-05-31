@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import logo from "../img/Emanuele Macchiarulo - Logo.png";
+import resume from "../docs/Emanuele_Front End Developer_CV.pdf";
 
 export const Contacts = ({ setcliCkedLink }) => {
   const contacts = [
@@ -40,29 +41,6 @@ export const Contacts = ({ setcliCkedLink }) => {
       ),
       text: "GitHub",
       link: "https://github.com/Em404",
-    },
-  ];
-
-  const navigation = [
-    {
-      id: 0,
-      name: "Home",
-      path: "/home",
-    },
-    {
-      id: 0,
-      name: "About",
-      path: "/about",
-    },
-    {
-      id: 0,
-      name: "Skills",
-      path: "/skills",
-    },
-    {
-      id: 0,
-      name: "Projects",
-      path: "/projects",
     },
   ];
 
@@ -122,7 +100,7 @@ export const Contacts = ({ setcliCkedLink }) => {
               <img src={logo} alt="logo-emanuele-macchiarulo" />
             </motion.div>
           </div>
-          <div className="justify-self-center md:justify-self-center">
+          <div className="justify-self-center">
             {contacts.map((contact, index) => {
               return (
                 <motion.div
@@ -145,7 +123,7 @@ export const Contacts = ({ setcliCkedLink }) => {
               );
             })}
           </div>
-          <div className="justify-self-center md:justify-self-end flex flex-col">
+          <div className="justify-self-center md:justify-self-end">
             <motion.div
               variants={fadeInUpAnimation}
               initial="initial"
@@ -155,9 +133,13 @@ export const Contacts = ({ setcliCkedLink }) => {
               }}
               className="mb-2"
             >
-              <button className="bg-purple-900 text-neutral-50 rounded-lg text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 md:mx-32 lg:ms-0 lg:me-32">
-                <Link to="/contatti">Scarica il mio CV!</Link>
-              </button>
+              <a
+                href={resume}
+                download="CV_Emanuele_Macchiarulo"
+                className="flex justify-center w-full bg-purple-900 text-neutral-50 rounded-lg lg:text-lg py-2 px-4 hover:scale-110 duration-300"
+              >
+                Scarica il mio CV!
+              </a>
             </motion.div>
           </div>
         </div>
