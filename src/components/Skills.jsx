@@ -90,7 +90,7 @@ export const Skills = () => {
 
   return (
     <Fragment>
-      <div className='container mx-auto px-8 md:px-32 lg:px-48 py-4'>
+      <div className='container mx-auto px-8 md:px-32 lg:px-48'>
         <motion.h2
             variants={fadeInDownAnimation}
             initial="initial"
@@ -99,7 +99,7 @@ export const Skills = () => {
               once: true
             }}
             transition={{duration: 1, ease: "easeOut", delay: 0.2}}
-            className='text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left text-purple-900 dark:text-neutral-50 mb-8 md:mb-16'>Skills</motion.h2>
+            className='text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left text-purple-600 dark:text-neutral-50 mb-8 md:mb-16'>Skills</motion.h2>
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-8'>
               {
                 icons.map((icon, index) => {

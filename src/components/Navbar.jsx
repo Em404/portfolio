@@ -66,7 +66,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
     return(
       <div className='container mx-auto px-48 py-8 flex justify-between items-center'>
         <div>
-          <Link to='/home'>
+          <Link to='/home' onClick={() => setcliCkedLink(true)}>
             <div className='w-24'>
               <img src={logo} alt="logo-emanuele-macchiarulo"/>
             </div>
@@ -87,7 +87,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
             </ul>
           </div>
           <div className='flex items-center'>
-            <button className='bg-purple-900 rounded-lg text-neutral-50' onClick={handleDarkMode}>
+            <button className='bg-purple-600 rounded-lg text-neutral-50' onClick={handleDarkMode}>
               {
                 darkMode ? iconMoon : iconSun
               }
@@ -103,7 +103,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
       <Fragment>
         <div className='container mx-auto px-8 md:px-32 py-4 flex justify-between items-center'>
           <div>
-            <Link to='/home'>
+            <Link to='/home' onClick={() => setcliCkedLink(true)}>
               <div className='w-16'>
                 <img src={logo} alt="logo-emanuele-macchiarulo"/>
               </div>
