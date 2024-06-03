@@ -115,11 +115,11 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
 
               {/* buttons - contacts and cv */}
               <div className='mb-16 md:mb-8 lg:mb-16 flex flex-col justify-center lg:justify-start'>
-                <button className='bg-purple-600 text-neutral-50 rounded-lg text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 mb-4 md:mx-32 lg:ms-0 lg:me-32' ref={contactsRef} id="contatti">
+                <button className='bg-purple-600 text-neutral-50 rounded-xl text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 mb-4 md:mx-32 lg:ms-0 lg:me-32' ref={contactsRef} id="contatti">
                  <Link to='/contacts' onClick={() => setcliCkedLink(true)}>Contattami!</Link>
                 </button>
               
-                  <a  href={resume} download='CV_Emanuele_Macchiarulo' className='flex justify-center bg-purple-600 text-neutral-50 rounded-lg text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 md:mx-32 lg:ms-0 lg:me-32'>
+                  <a  href={resume} download='CV_Emanuele_Macchiarulo' className='flex justify-center bg-purple-600 text-neutral-50 rounded-xl text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 md:mx-32 lg:ms-0 lg:me-32'>
                     Scarica il mio CV!
                   </a>
             

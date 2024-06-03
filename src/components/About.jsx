@@ -28,7 +28,7 @@ export const About = () => {
 
   return (
     <Fragment>
-      <div className='container mx-auto px-8 md:px-16 lg:px-32 py-8 bg-purple-600 xl:rounded-3xl custom-box-shadow'>
+      <div className='container mx-auto px-8 md:px-16 lg:px-32 py-8 bg-purple-600 xl:rounded-xl custom-box-shadow'>
 
         {/* H2 */}
         <motion.h2

@@ -136,7 +136,7 @@ export const Contacts = ({ setcliCkedLink }) => {
               <a
                 href={resume}
                 download="CV_Emanuele_Macchiarulo"
-                className="flex justify-center w-full bg-purple-600 text-neutral-50 rounded-lg lg:text-lg py-2 px-4 hover:scale-110 duration-300"
+                className="flex justify-center w-full bg-purple-600 text-neutral-50 rounded-xl lg:text-lg py-2 px-4 hover:scale-110 duration-300"
               >
                 Scarica il mio CV!
               </a>
