@@ -87,7 +87,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
             </ul>
           </div>
           <div className='flex items-center'>
-            <button className='bg-purple-600 rounded-lg text-neutral-50' onClick={handleDarkMode}>
+            <button className='bg-purple-600 rounded-xl text-neutral-50' onClick={handleDarkMode}>
               {
                 darkMode ? iconMoon : iconSun
               }
