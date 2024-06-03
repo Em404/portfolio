@@ -92,11 +92,11 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
                     // Same substring at the start will only be typed out once, initially
                     'Front End Developer',
                     1000, // wait 1s before replacing "Mice" with "Hamsters"
-                    'Amo la tecnologia',
+                    'amante della tecnologia 💻',
                     1000,
-                    'Amo i videogiochi',
+                    'gamer 🎮',
                     1000,
-                    'Amo la musica',
+                    // 'con la musica sempre in cuffia 🎧',
                     1000
                   ]}
                   wrapper="span"
