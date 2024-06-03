@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import profilePic from '../img/Emanuele-Macchiarulo-Sviluppatore-React.png'
+import profilePic from '../img/profile-pic.png'
 import { motion } from "framer-motion"
 
 export const About = () => {

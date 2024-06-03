@@ -5,10 +5,11 @@ import {Projects} from "../components/Projects"
 import {Contacts} from "../components/Contacts"
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom';
-import profilePic from '../img/Emanuele-Macchiarulo-Sviluppatore-React.png'
 import { motion } from "framer-motion"
 import { useLocation } from 'react-router-dom';
 import resume from '../docs/Emanuele_Front End Developer_CV.pdf'
+import profilePic from '../img/emanuele.png'
+import mac from "../img/mac.png"
 
 export const Home = ({ clickedLink, setcliCkedLink }) => {
   const homeRef = useRef(null);
@@ -108,7 +109,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
               {/* profile pic mobile */}
               <div className='lg:hidden my-8 flex justify-center'>
                 <div className='w-[12rem] md:w-[16rem]'>
-                  <img src={profilePic} alt="Emanuele-Macchiarulo-Sviluppatore-React" loading='lazy' className='custom-drop-shadow'/>
+                  <img src={mac} alt="Emanuele-Macchiarulo-Sviluppatore-React" loading='lazy' className='custom-drop-shadow'/>
                 </div>
               </div>
 
@@ -149,7 +150,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
                transition={{duration: 1, ease: "easeOut", delay: 0.2}}
               className='justify-self-center self-center hidden lg:block'>
               <div className='w-[20rem] xl:w-[24rem]'>
-                <img src={profilePic} alt="Emanuele-Macchiarulo-Sviluppatore-React" loading='lazy' className='custom-drop-shadow'/>
+                <img src={mac} alt="Emanuele-Macchiarulo-Sviluppatore-React" loading='lazy' className='custom-drop-shadow'/>
               </div>
             </motion.div>
           </div>
