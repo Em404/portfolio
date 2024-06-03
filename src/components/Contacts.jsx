@@ -73,7 +73,7 @@ export const Contacts = ({ setcliCkedLink }) => {
 
   return (
     <Fragment>
-      <div className="container mx-auto px-8 md:px-32 lg:px-48">
+      <div className="container mx-auto px-8 md:px-16 lg:px-32">
         <motion.h2
           variants={fadeInDownAnimation}
           initial="initial"
@@ -97,7 +97,7 @@ export const Contacts = ({ setcliCkedLink }) => {
               }}
               className="w-32 md:w-full"
             >
-              <img src={logo} alt="logo-emanuele-macchiarulo" />
+              <p className='inconsolata text-purple-600 text-3xl'>{`<EM/>`}</p>
             </motion.div>
           </div>
           <div className="justify-self-center">

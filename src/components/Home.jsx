@@ -71,8 +71,8 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
 
   return (
     <Fragment>
-      <div ref={homeRef} className='bg-neutral-50 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 flex items-center h-[100vh] h-custom'>
-        <div className='container mx-auto px-8 md:px-16 lg:px-48'>
+      <div ref={homeRef} className='bg-neutral-50 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 pt-20 md:pt-20 lg:pt-24 xl:pt-28 h-screen h-custom flex items-center'>
+        <div className='container mx-auto px-8 md:px-16 lg:px-24 xl:px-32'>
           <div className='grid grid-cols-1 lg:grid-cols-2'>
             <motion.div
               variants={fadeInDownAnimation}
@@ -106,8 +106,8 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
               </div>
 
               {/* profile pic mobile */}
-              <div className='lg:hidden mb-12 flex justify-center'>
-                <div className='w-[12rem]'>
+              <div className='lg:hidden my-8 flex justify-center'>
+                <div className='w-[12rem] md:w-[16rem]'>
                   <img src={profilePic} alt="Emanuele-Macchiarulo-Sviluppatore-React" loading='lazy' className='custom-drop-shadow'/>
                 </div>
               </div>
@@ -148,7 +148,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
                }}
                transition={{duration: 1, ease: "easeOut", delay: 0.2}}
               className='justify-self-center self-center hidden lg:block'>
-              <div className='w-[24rem]'>
+              <div className='w-[20rem] xl:w-[24rem]'>
                 <img src={profilePic} alt="Emanuele-Macchiarulo-Sviluppatore-React" loading='lazy' className='custom-drop-shadow'/>
               </div>
             </motion.div>
@@ -156,7 +156,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
         </div>
       </div>
       
-      <div ref={aboutRef} id="about" className="bg-neutral-50 dark:bg-neutral-800 text-neutral-50 flex items-center h-[100vh] h-custom pt-24 md:pt-0">
+      <div ref={aboutRef} id="about" className="bg-neutral-50 dark:bg-neutral-800 text-neutral-50 flex items-center pt-20 lg:pt-24 xl:pt-28 h-screen">
           <About />
         </div>
 

@@ -28,7 +28,7 @@ export const About = () => {
 
   return (
     <Fragment>
-      <div className='container mx-auto px-8 md:px-32 lg:px-48 bg-purple-600 lg:rounded-3xl custom-box-shadow py-4'>
+      <div className='container mx-auto px-8 md:px-16 lg:px-32 py-8 bg-purple-600 xl:rounded-3xl custom-box-shadow'>
 
         {/* H2 */}
         <motion.h2
@@ -39,7 +39,7 @@ export const About = () => {
             once: true
           }}
           transition={{duration: 1, ease: "easeOut", delay: 0.2}}
-          className='text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left text-neutral-50 pt-4 mb-4 md:mb-8 lg:mb-4'>Su di me
+          className='text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left text-neutral-50 my-4 md:my-8 lg:my-4'>Su di me
         </motion.h2>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16 lg:gap-0'>

@@ -64,11 +64,11 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
   
   const desktopNavbar = () => {
     return(
-      <div className='container mx-auto px-48 py-8 flex justify-between items-center'>
+      <div className='container mx-auto md:px-16 lg:px-24 xl:px-32 py-8 flex justify-between items-center'>
         <div>
           <Link to='/home' onClick={() => setcliCkedLink(true)}>
             <div className='w-24'>
-              <img src={logo} alt="logo-emanuele-macchiarulo"/>
+              <p className='inconsolata text-purple-600 text-3xl'>{`<EM/>`}</p>
             </div>
           </Link>
         </div>
@@ -101,11 +101,11 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
   const mobileNavbar = () => {
     return (
       <Fragment>
-        <div className='container mx-auto px-8 md:px-32 py-4 flex justify-between items-center'>
+        <div className='container mx-auto px-8 md:px-16 py-4 flex justify-between items-center'>
           <div>
             <Link to='/home' onClick={() => setcliCkedLink(true)}>
               <div className='w-16'>
-                <img src={logo} alt="logo-emanuele-macchiarulo"/>
+                <p className='inconsolata text-purple-600 text-3xl'>{`<EM/>`}</p>
               </div>
             </Link>
           </div>
