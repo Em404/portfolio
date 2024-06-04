@@ -99,7 +99,7 @@ export const Projects = () => {
                       }}
                       custom={index}
                       key={index} className='flex flex-col items-center py-4 px-4 dark:bg-neutral-800 bg-purple-600 rounded-xl text-neutral-50 custom-box-shadow'>
-                      <img src={project.thumb} alt={project.name} className="rounded-xl"/>
+                      <img src={project.thumb} alt={project.name} className="rounded-xl shadow-neutral-900 shadow-lg"/>
                       <h3 className='mt-4 font-semibold md:text-lg text-center'>{project.name}</h3>
                       <p className='text-center mt-2'>{project.description}</p>
                       <div className='flex flex-wrap justify-center mt-4'>
