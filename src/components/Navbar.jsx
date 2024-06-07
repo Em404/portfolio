@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom';
-import logo from '../img/logo-em.png'
 
 export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
 

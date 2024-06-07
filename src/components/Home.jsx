@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import { motion } from "framer-motion"
 import { useLocation } from 'react-router-dom';
 import resume from '../docs/Emanuele_Front End Developer_CV.pdf'
-import profilePic from '../img/emanuele.png'
 import mac from "../img/mac.png"
 
 export const Home = ({ clickedLink, setcliCkedLink }) => {

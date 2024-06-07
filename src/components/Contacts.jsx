@@ -1,7 +1,5 @@
 import React, { Fragment } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import logo from "../img/Emanuele Macchiarulo - Logo.png";
 import resume from "../docs/Emanuele_Front End Developer_CV.pdf";
 import { Helmet } from "react-helmet-async";
 
