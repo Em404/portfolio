@@ -97,7 +97,7 @@ export const Contacts = ({ setcliCkedLink }) => {
               }}
               className="w-32 md:w-full"
             >
-              <p className='inconsolata text-purple-600 text-3xl'>{`<EM/>`}</p>
+              <p className='inconsolata text-purple-600 text-3xl text-center'>{`<EM/>`}</p>
             </motion.div>
           </div>
           <div className="justify-self-center">
