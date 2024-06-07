@@ -10,8 +10,13 @@ import bootstrapIcon from "../icons/bootstrap.svg";
 import tailwindIcon from "../icons/tailwind-css.svg";
 import gitIcon from "../icons/git.svg";
 import { Helmet } from "react-helmet-async";
+import { getPageMeta } from '../utils/metaUtils';
+import { useLocation } from "react-router-dom";
 
 export const Skills = () => {
+  const location = useLocation();
+  const pageMeta = getPageMeta(location.pathname);
+
   const fadeInDownAnimation = {
     initial: {
       opacity: 0,
@@ -90,12 +95,12 @@ export const Skills = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Emanuele Macchiarulo | Skills</title>
+        <title>{pageMeta.title}</title>
         <meta
           name="description"
-          content="Skill di Emanuele, sviluppatore front end react"
+          content={pageMeta.description}
         />
-        <link rel="canonical" href="/skills" />
+        <link rel="canonical" href={pageMeta.canonical}/>
       </Helmet>
       <div className="container mx-auto px-8 md:px-16 lg:px-32">
         <motion.h2

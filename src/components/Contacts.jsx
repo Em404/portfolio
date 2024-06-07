@@ -2,8 +2,13 @@ import React, { Fragment } from "react";
 import { motion } from "framer-motion";
 import resume from "../docs/Emanuele_Front End Developer_CV.pdf";
 import { Helmet } from "react-helmet-async";
+import { getPageMeta } from '../utils/metaUtils';
+import { useLocation } from "react-router-dom";
 
 export const Contacts = ({ setcliCkedLink }) => {
+  const location = useLocation();
+  const pageMeta = getPageMeta(location.pathname);
+
   const contacts = [
     {
       id: 0,
@@ -73,12 +78,12 @@ export const Contacts = ({ setcliCkedLink }) => {
   return (
     <Fragment>
       <Helmet>
-        <title>Emanuele Macchiarulo | Contacts</title>
+        <title>{pageMeta.title}</title>
         <meta
           name="description"
-          content="Contatti di Emanuele, sviluppatore front end react"
+          content={pageMeta.description}
         />
-        <link rel="canonical" href="/contacts" />
+        <link rel="canonical" href={pageMeta.canonical}/>
       </Helmet>
       <div className="container mx-auto px-8 md:px-16 lg:px-32">
         <motion.h2

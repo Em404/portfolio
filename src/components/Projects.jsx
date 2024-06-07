@@ -6,8 +6,13 @@ import nutrizionista from "../img/Nutrizionista-React.png";
 import neonweather from "../img/Neon-Weather-React.png";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { getPageMeta } from '../utils/metaUtils';
+import { useLocation } from "react-router-dom";
 
 export const Projects = () => {
+  const location = useLocation();
+  const pageMeta = getPageMeta(location.pathname);
+
   const projects = [
     {
       id: 0,
@@ -81,12 +86,12 @@ export const Projects = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Emanuele Macchiarulo | Projects</title>
+        <title>{pageMeta.title}</title>
         <meta
           name="description"
-          content="Progetti realizzati da Emanuele, sviluppatore front end react"
+          content={pageMeta.description}
         />
-        <link rel="canonical" href="/projects" />
+        <link rel="canonical" href={pageMeta.canonical}/>
       </Helmet>
       <div className="container mx-auto px-8 md:px-32 lg:px-32 pt-24 pb-24">
         <motion.h2

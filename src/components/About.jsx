@@ -2,8 +2,13 @@ import React, { Fragment } from "react";
 import profilePic from "../img/profile-pic.png";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { getPageMeta } from '../utils/metaUtils';
+import { useLocation } from "react-router-dom";
 
 export const About = () => {
+  const location = useLocation();
+  const pageMeta = getPageMeta(location.pathname);
+
   const fadeInDownAnimation = {
     initial: {
       opacity: 0,
@@ -29,12 +34,12 @@ export const About = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Emanuele Macchiarulo | About</title>
+        <title>{pageMeta.title}</title>
         <meta
           name="description"
-          content="Infromazioni su Emanuele, sviluppatore front end react"
+          content={pageMeta.description}
         />
-        <link rel="canonical" href="/about" />
+        <link rel="canonical" href={pageMeta.canonical}/>
       </Helmet>
 
       <div className="container mx-auto px-8 md:px-16 lg:px-32 py-8 bg-purple-600 xl:rounded-xl custom-box-shadow">

@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 import resume from "../docs/Emanuele_Front End Developer_CV.pdf";
 import mac from "../img/mac.png";
 import { Helmet } from "react-helmet-async";
+import { getPageMeta } from '../utils/metaUtils';
 
 export const Home = ({ clickedLink, setcliCkedLink }) => {
   const homeRef = useRef(null);
@@ -18,6 +19,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
   const projectsRef = useRef(null);
   const contactsRef = useRef(null);
   const location = useLocation();
+  const pageMeta = getPageMeta(location.pathname);
 
   const scrollToSection = (sectionRef) => {
     sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -73,12 +75,12 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
   return (
     <Fragment>
       <Helmet>
-        <title>Emanuele Macchiarulo | Home</title>
+        <title>{pageMeta.title}</title>
         <meta
           name="description"
-          content="Emanuele Macchiarulo, sviluppatore front end react"
+          content={pageMeta.description}
         />
-        <link rel="canonical" href="/home" />
+        <link rel="canonical" href={pageMeta.canonical}/>
       </Helmet>
       <div
         ref={homeRef}
