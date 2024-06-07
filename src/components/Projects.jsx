@@ -81,7 +81,7 @@ export const Projects = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Projects</title>
+        <title>Emanuele Macchiarulo | Projects</title>
         <meta
           name="description"
           content="Progetti realizzati da Emanuele, sviluppatore front end react"

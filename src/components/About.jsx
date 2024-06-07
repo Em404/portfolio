@@ -29,7 +29,7 @@ export const About = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>About</title>
+        <title>Emanuele Macchiarulo | About</title>
         <meta
           name="description"
           content="Infromazioni su Emanuele, sviluppatore front end react"

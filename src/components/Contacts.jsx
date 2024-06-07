@@ -73,7 +73,7 @@ export const Contacts = ({ setcliCkedLink }) => {
   return (
     <Fragment>
       <Helmet>
-        <title>Contacts</title>
+        <title>Emanuele Macchiarulo | Contacts</title>
         <meta
           name="description"
           content="Contatti di Emanuele, sviluppatore front end react"

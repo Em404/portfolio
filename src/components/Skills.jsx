@@ -90,7 +90,7 @@ export const Skills = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Skills</title>
+        <title>Emanuele Macchiarulo | Skills</title>
         <meta
           name="description"
           content="Skill di Emanuele, sviluppatore front end react"
