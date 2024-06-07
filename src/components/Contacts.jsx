@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import logo from "../img/Emanuele Macchiarulo - Logo.png";
 import resume from "../docs/Emanuele_Front End Developer_CV.pdf";
+import { Helmet } from "react-helmet-async";
 
 export const Contacts = ({ setcliCkedLink }) => {
   const contacts = [
@@ -73,6 +74,14 @@ export const Contacts = ({ setcliCkedLink }) => {
 
   return (
     <Fragment>
+      <Helmet>
+        <title>Contacts</title>
+        <meta
+          name="description"
+          content="Contatti di Emanuele, sviluppatore front end react"
+        />
+        <link rel="canonical" href="/contacts" />
+      </Helmet>
       <div className="container mx-auto px-8 md:px-16 lg:px-32">
         <motion.h2
           variants={fadeInDownAnimation}
@@ -97,7 +106,7 @@ export const Contacts = ({ setcliCkedLink }) => {
               }}
               className="w-32 md:w-full"
             >
-              <p className='inconsolata text-purple-600 text-3xl text-center'>{`<EM/>`}</p>
+              <p className="inconsolata text-purple-600 text-3xl text-center">{`<EM/>`}</p>
             </motion.div>
           </div>
           <div className="justify-self-center">
@@ -113,7 +122,12 @@ export const Contacts = ({ setcliCkedLink }) => {
                   custom={index}
                   key={index}
                 >
-                  <a href={contact.link} target="_blank" rel="noopener noreferrer" className="flex mb-2 items-center">
+                  <a
+                    href={contact.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex mb-2 items-center"
+                  >
                     <span className="pe-1 lg:pe-2">{contact.icon}</span>
                     <p className="font-semibold text-neutral-800 dark:text-neutral-100 lg:text-lg">
                       {contact.text}
