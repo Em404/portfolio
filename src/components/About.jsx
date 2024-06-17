@@ -91,10 +91,8 @@ export const About = () => {
             className="text-center md:text-left lg:mt-0 flex flex-col"
           >
             <h3>Ciao a tutti!</h3>
-            <p>
-              Sono un Front End Developer con competenze in{" "}
-              <span className="font-bold">React</span>.
-            </p>
+            <p>Mi chiamo Emanuele e sono un Front End Developer.</p>
+            <p className="mb-4">Sono un perito informatico e per consolidare le mie basi da sviluppatore ho frequentato un corso da <span className="font-semibold">Front-End Developer</span> presso <span className="font-semibold">Epicode</span>.</p>
             <p>
               Mi ritengo una persona precisa, organizzata, con buone capacità di
               problem solving e in grado di lavorare sia in autonomia che in
@@ -105,11 +103,11 @@ export const About = () => {
                 💭 Sempre alla ricerca di nuovi stimoli e opportunità per
                 crescere sia come professionista che come persona. 🤝
               </p>
-              <p className="mt-4">Appassionato di:</p>
+              <p className="mt-4">Quando non sto scrivendo codice puoi trovarmi:</p>
               <ul>
-                <li>💻 Tecnologia</li>
-                <li>🎮 Videogames</li>
-                <li>🎵 Musica</li>
+                <li>a leggere degli articoli di <span className="font-semibold">tecnologia💻</span></li>
+                <li>a passare del tempo su un buon <span className="font-semibold">videogame</span>🎮</li>
+                <li>ad ascoltare della <span className="font-semibold">musica</span>🎵</li>
               </ul>
             </div>
           </motion.div>
@@ -130,12 +128,12 @@ export const About = () => {
             💭 Sempre alla ricerca di nuovi stimoli e opportunità per crescere
             sia come professionista che come persona. 🤝
           </p>
-          <p className="mt-4">Appassionato di:</p>
-          <ul>
-            <li>💻 Tecnologia</li>
-            <li>🎮 Videogames</li>
-            <li>🎵 Musica</li>
-          </ul>
+          <p className="mt-4">Quando non sto scrivendo codice puoi trovarmi:</p>
+              <ul>
+                <li>a leggere degli articoli di <span className="font-semibold">tecnologia💻</span></li>
+                <li>a passare del tempo su un buon <span className="font-semibold">videogame</span>🎮</li>
+                <li>ad ascoltare della <span className="font-semibold">musica</span>🎵</li>
+              </ul>
         </motion.div>
       </div>
     </Fragment>
