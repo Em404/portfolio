@@ -218,7 +218,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
       <div
         ref={aboutRef}
         id="about"
-        className="bg-neutral-50 dark:bg-neutral-800 text-neutral-50 flex items-center pt-20 lg:pt-24 xl:pt-28 h-screen"
+        className="bg-neutral-50 dark:bg-neutral-800 text-neutral-50 flex items-center pt-16 md:h-screen h-custom"
       >
         <About />
       </div>

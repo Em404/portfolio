@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./styles/App.css";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./components/Home";
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const [clickedLink, setcliCkedLink] = useState(false);
@@ -10,7 +11,15 @@ function App() {
     const savedDarkMode = localStorage.getItem('dark-mode');
     return savedDarkMode ? JSON.parse(savedDarkMode) : false;
   });
+  const [language, setLanguage] = useState('en');
 
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setLanguage(lng);
+  };
+  
   // Aggiorna il localStorage quando lo stato del tema cambia
   useEffect(() => {
     localStorage.setItem('dark-mode', JSON.stringify(darkMode));
@@ -29,6 +38,9 @@ function App() {
               darkMode={darkMode}
               handleDarkMode={handleDarkMode}
               setcliCkedLink={setcliCkedLink}
+              language={language}
+              changeLanguage={changeLanguage}
+              t={t}
             />
           </div>
 

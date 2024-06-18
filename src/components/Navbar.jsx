@@ -1,13 +1,18 @@
 import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom';
 
-export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
+export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink, language, changeLanguage, t }) => {
 
   const [navbar, setNavbar] = useState(false)
 
   const handleNavbar = () => {
     setNavbar(!navbar)
   }
+
+  const handleLanguage = () => {
+    const newLanguage = language === 'en' ? 'it' : 'en';
+    changeLanguage(newLanguage);
+  };
 
   const navItems = [
     {
@@ -32,7 +37,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
     },
     {
       id: 4,
-      name: "Contatti",
+      name: "Contacts",
       path: "contacts",
     }
   ];
@@ -91,6 +96,13 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
                 darkMode ? iconMoon : iconSun
               }
             </button>
+            <div className='ms-4'>
+              <button className='text-neutral-50 flex items-center gap-2 duration-300 rounded-xl border border-transparent px-2 bg-purple-600' onClick={handleLanguage}>
+                {
+                  language === 'en' ? <span>EN</span> : <span>ITA</span>
+                }
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -130,9 +142,17 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink }) => {
             ))}
             <li className='px-4 py-2'>
               
-              <button className='text-neutral-50 flex items-center gap-2 duration-300' onClick={handleDarkMode}>Cambia tema
+              <button className='text-neutral-50 flex items-center gap-2 duration-300' onClick={handleDarkMode}>{t('theme')}
                 {
                   darkMode ? iconMoon : iconSun
+                }
+              </button>
+            </li>
+            <li className='px-4 py-2'>
+              
+              <button className='text-neutral-50 flex items-center gap-2 duration-300' onClick={handleLanguage}>{t('lang')}
+                {
+                  language === 'en' ? <span className='ms-2'>EN</span> : <span className='ms-2'>ITA</span>
                 }
               </button>
             </li>
