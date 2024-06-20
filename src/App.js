@@ -77,6 +77,7 @@ function App() {
                   location={"about"}
                   clickedLink={clickedLink}
                   setcliCkedLink={setcliCkedLink}
+                  t={t}
                 />
               }
             />
@@ -88,6 +89,7 @@ function App() {
                   location={"skills"}
                   clickedLink={clickedLink}
                   setcliCkedLink={setcliCkedLink}
+                  t={t}
                 />
               }
             />
@@ -99,6 +101,7 @@ function App() {
                   location={"projects"}
                   clickedLink={clickedLink}
                   setcliCkedLink={setcliCkedLink}
+                  t={t}
                 />
               }
             />
