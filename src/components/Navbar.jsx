@@ -141,7 +141,6 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink, language, cha
               </li>
             ))}
             <li className='px-4 py-2'>
-              
               <button className='text-neutral-50 flex items-center gap-2 duration-300' onClick={handleDarkMode}>{t('theme')}
                 {
                   darkMode ? iconMoon : iconSun
@@ -149,7 +148,6 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink, language, cha
               </button>
             </li>
             <li className='px-4 py-2'>
-              
               <button className='text-neutral-50 flex items-center gap-2 duration-300' onClick={handleLanguage}>{t('lang')}
                 {
                   language === 'en' ? <span className='ms-2'>EN</span> : <span className='ms-2'>ITA</span>

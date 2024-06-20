@@ -8,7 +8,6 @@ import reactIcon from "../icons/react.svg";
 import angularIcon from "../icons/file-type-angular.svg";
 import bootstrapIcon from "../icons/bootstrap.svg";
 import tailwindIcon from "../icons/tailwind-css.svg";
-import gitIcon from "../icons/git.svg";
 import { Helmet } from "react-helmet-async";
 import { getPageMeta } from '../utils/metaUtils';
 import { useLocation } from "react-router-dom";
@@ -84,12 +83,7 @@ export const Skills = () => {
       id: 7,
       name: "Tailwind",
       icon: tailwindIcon,
-    },
-    // {
-    //   id: 8,
-    //   name: 'git',
-    //   icon: gitIcon,
-    // }
+    }
   ];
 
   return (

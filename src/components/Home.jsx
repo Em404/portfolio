@@ -107,12 +107,10 @@ export const Home = ({ clickedLink, setcliCkedLink, t, language }) => {
                   sequence={[
                     // Same substring at the start will only be typed out once, initially
                     "Front End Developer",
-                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    1000, // wait 1s before replacing string
                     t("sequence_2"),
                     1000,
                     "gamer 🎮",
-                    1000,
-                    // 'con la musica sempre in cuffia 🎧',
                     1000,
                   ]}
                   wrapper="span"
@@ -215,42 +213,24 @@ export const Home = ({ clickedLink, setcliCkedLink, t, language }) => {
         </div>
       </div>
 
-      <div
-        ref={aboutRef}
-        id="about"
-        className="bg-neutral-50 dark:bg-neutral-800 text-neutral-50 flex items-center pt-16 md:h-screen h-custom"
-      >
+      <div ref={aboutRef} id="about" className="bg-neutral-50 dark:bg-neutral-800 text-neutral-50 flex items-center pt-16 md:h-screen h-custom">
         <About t={t} language={language}/>
       </div>
 
-      <div
-        ref={skillsRef}
-        id="skills"
-        className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 flex items-center h-[100vh] h-custom"
-      >
+      <div ref={skillsRef} id="skills" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 flex items-center h-[100vh] h-custom">
         <Skills t={t} language={language}/>
       </div>
 
-      <div
-        ref={projectsRef}
-        id="projects"
-        className="bg-neutral-50 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 flex items-center"
-      >
+      <div ref={projectsRef} id="projects" className="bg-neutral-50 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 flex items-center">
         <Projects t={t} language={language}/>
       </div>
 
-      <div
-        ref={contactsRef}
-        id="contacts"
-        className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 flex items-center h-[90vh]"
-      >
+      <div ref={contactsRef} id="contacts" className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 flex items-center h-[90vh]">
         <Contacts t={t} language={language}/>
       </div>
 
       <div className="bg-purple-600 text-neutral-100 dark:bg-neutral-800 dark:text-neutral-100 flex items-center justify-center h-[10vh] py-8">
-        <p className="text-center font-semibold">
-          Copyright © Emanuele Macchiarulo | 2024
-        </p>
+        <p className="text-center font-semibold">Copyright © Emanuele Macchiarulo | 2024</p>
       </div>
     </Fragment>
   );
