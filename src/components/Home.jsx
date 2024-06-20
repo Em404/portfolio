@@ -29,7 +29,7 @@ export const Home = ({ clickedLink, setcliCkedLink, t, language }) => {
     if (clickedLink) {
       setcliCkedLink(false);
       switch (location.pathname) {
-        case "/home":
+        case "/":
           scrollToSection(homeRef);
           break;
         case "/about":

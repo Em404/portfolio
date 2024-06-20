@@ -18,7 +18,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink, language, cha
     {
       id: 0,
       name: "Home",
-      path: "home",
+      path: "/",
     },
     {
       id: 1,
@@ -70,7 +70,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink, language, cha
     return(
       <div className='container mx-auto md:px-16 lg:px-24 xl:px-32 py-8 flex justify-between items-center'>
         <div>
-          <Link to='/home' onClick={() => setcliCkedLink(true)}>
+          <Link to='/' onClick={() => setcliCkedLink(true)}>
             <div className='w-24'>
               <p className='inconsolata text-purple-600 text-3xl'>{`<EM/>`}</p>
             </div>
@@ -114,7 +114,7 @@ export const Navbar = ({ darkMode, handleDarkMode, setcliCkedLink, language, cha
       <Fragment>
         <div className='container mx-auto px-8 md:px-16 py-4 flex justify-between items-center'>
           <div>
-            <Link to='/home' onClick={() => setcliCkedLink(true)}>
+            <Link to='/' onClick={() => setcliCkedLink(true)}>
               <div className='w-16'>
                 <p className='inconsolata text-purple-600 text-3xl'>{`<EM/>`}</p>
               </div>

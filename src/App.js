@@ -11,7 +11,7 @@ function App() {
   // Dark mode state
   const [darkMode, setDarkMode] = useState(() => {
     const savedDarkMode = localStorage.getItem('dark-mode');
-    return savedDarkMode ? JSON.parse(savedDarkMode) : false;
+    return savedDarkMode ? JSON.parse(savedDarkMode) : true;
   });
 
   // Language state
@@ -50,8 +50,8 @@ function App() {
             <Navbar darkMode={darkMode} handleDarkMode={handleDarkMode} setcliCkedLink={setcliCkedLink} language={language} changeLanguage={changeLanguage} t={t}/>
           </div>
           <Routes>
-            {/* <Route exact path="/" element={<Home location={"home"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink} t={t} language={language}/>}/> */}
-            <Route exact path="/home" element={<Home location={"home"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink} t={t} language={language}/>}/>
+            <Route exact path="/" element={<Home location={"home"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink} t={t} language={language}/>}/>
+            {/* <Route exact path="/home" element={<Home location={"home"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink} t={t} language={language}/>}/> */}
             <Route exact path="/about" element={<Home location={"about"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink} t={t} language={language}/>}/>
             <Route exact path="/skills" element={<Home location={"skills"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink} t={t} language={language}/>}/>
             <Route exact path="/projects" element={<Home location={"projects"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink} t={t} language={language}/>}/>
