@@ -9,17 +9,16 @@ import { Helmet } from "react-helmet-async";
 import { getPageMeta } from '../utils/metaUtils';
 import { useLocation } from "react-router-dom";
 
-export const Projects = () => {
+export const Projects = ({ t }) => {
   const location = useLocation();
   const pageMeta = getPageMeta(location.pathname);
 
   const projects = [
     {
       id: 0,
-      name: "Il mio prtfolio",
+      name: t('portfolio'),
       thumb: portfolio,
-      description:
-        "Portfolio che racchiude i miei progetti e le mie informazioni.",
+      description: t('portfolio_desc'),
       repo: "https://github.com/Em404/portfolio",
       url: "",
       tags: ["React", "Tailwind", "Framer Motion"],
@@ -28,18 +27,16 @@ export const Projects = () => {
       id: 1,
       name: "B-Sample",
       thumb: bsample,
-      description:
-        "Piattaforma rivolta ai produttori musicali, per cercare ispirazione, nuovi sample e per poterli scaricare e utilizzare nelle proprie produzioni.",
+      description: t('bsample_desc'),
       repo: "https://github.com/Em404/Capstone-B-Sample-Emanuele-Macchiarulo",
       url: "",
       tags: ["Angular", "Bootstrap", "API"],
     },
     {
       id: 2,
-      name: "Studio Professionale di Nutrizione | Gaspa - Micheli",
+      name: t('nutrition_studio'),
       thumb: nutrizionista,
-      description:
-        "Sito vetrina per un ipotetico studio di nutrizione. In questo caso vengono riportate le informazioni del nutrizionista che attualmente mi segue.",
+      description: t('nutrition_studio_desc'),
       repo: "https://github.com/Em404/website-nutrizionista",
       url: "https://gaspa-micheli.web.app/home",
       tags: ["React", "Tailwind", "NextUI"],
@@ -48,8 +45,7 @@ export const Projects = () => {
       id: 3,
       name: "Neon Weather",
       thumb: neonweather,
-      description:
-        "Neon Weather è una webapp per il meteo che riprende il tema Cyberpunk.",
+      description: t('weather_app_desc'),
       repo: "https://github.com/Em404/webapp-weather",
       url: "https://weather-app-7f1c6.web.app/",
       tags: ["React", "Tailwind", "API"],

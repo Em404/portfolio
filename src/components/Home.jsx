@@ -12,7 +12,7 @@ import mac from "../img/mac.png";
 import { Helmet } from "react-helmet-async";
 import { getPageMeta } from '../utils/metaUtils';
 
-export const Home = ({ clickedLink, setcliCkedLink }) => {
+export const Home = ({ clickedLink, setcliCkedLink, t, language }) => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -99,16 +99,16 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
               className="font-semibold text-lg md:text-xl lg:text-2xl self-center"
             >
               <div className="mb-4 lg:mb-16 text-left">
-                <p className="">Ciao!</p>
+                <p className="">{t('hi')}!</p>
                 <p>
-                  Sono <span className="text-purple-600">Emanuele</span>,
+                {t('iam')} <span className="text-purple-600">Emanuele</span>,
                 </p>
                 <TypeAnimation
                   sequence={[
                     // Same substring at the start will only be typed out once, initially
                     "Front End Developer",
                     1000, // wait 1s before replacing "Mice" with "Hamsters"
-                    "amante della tecnologia 💻",
+                    t("sequence_2"),
                     1000,
                     "gamer 🎮",
                     1000,
@@ -142,7 +142,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
                   id="contatti"
                 >
                   <Link to="/contacts" onClick={() => setcliCkedLink(true)}>
-                    Contattami!
+                    {t("contact_me")}
                   </Link>
                 </button>
 
@@ -151,7 +151,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
                   download="CV_Emanuele_Macchiarulo"
                   className="flex justify-center bg-purple-600 text-neutral-50 rounded-xl text-lg md:text-xl py-2 px-4 hover:scale-110 duration-300 md:mx-32 lg:ms-0 lg:me-32"
                 >
-                  Scarica il mio CV!
+                  {t("download_cv")}
                 </a>
               </div>
 
@@ -220,7 +220,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
         id="about"
         className="bg-neutral-50 dark:bg-neutral-800 text-neutral-50 flex items-center pt-16 md:h-screen h-custom"
       >
-        <About />
+        <About t={t}/>
       </div>
 
       <div
@@ -228,7 +228,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
         id="skills"
         className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 flex items-center h-[100vh] h-custom"
       >
-        <Skills />
+        <Skills t={t}/>
       </div>
 
       <div
@@ -236,7 +236,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
         id="projects"
         className="bg-neutral-50 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 flex items-center"
       >
-        <Projects />
+        <Projects t={t}/>
       </div>
 
       <div
@@ -244,7 +244,7 @@ export const Home = ({ clickedLink, setcliCkedLink }) => {
         id="contacts"
         className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 flex items-center h-[90vh]"
       >
-        <Contacts />
+        <Contacts t={t}/>
       </div>
 
       <div className="bg-purple-600 text-neutral-100 dark:bg-neutral-800 dark:text-neutral-100 flex items-center justify-center h-[10vh] py-8">

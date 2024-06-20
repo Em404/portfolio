@@ -1,5 +1,43 @@
 {
-  "_navbar-component": "NAVBAR",
+  "_navbar_component": "NAVBAR",
   "theme": "Cambia tema",
-  "lang": "Cambia Lingua"
+  "lang": "Cambia Lingua",
+
+  "_home_component": "HOME",
+  "hi": "Ciao",
+  "iam": "Sono",
+  "sequence_2": "amante della tecnologia 💻",
+  "contact_me": "Contattami!",
+  "download_cv": "Scarica il mio CV!",
+
+  "_about_component": "ABOUT",
+  "about_me": "Su di me",
+  "hi_everyone": "Ciao a tutti!",
+  "presentation_1": "Mi chiamo Emanuele e sono un Front End Developer.",
+  "presentation_2": "Sono un perito informatico e per consolidare le mie basi da sviluppatore ho frequentato il corso da",
+  "presentation_3": "Mi ritengo una persona precisa, organizzata, con buone capacità di problem solving e in grado di lavorare sia in autonomia che in gruppo mostrando adattabilità e flessibilità.",
+  "presentation_4": "💭 Sempre alla ricerca di nuovi stimoli e opportunità per crescere sia come professionista che come persona. 🤝",
+  "presentation_5": "Quando non sto scrivendo codice puoi trovarmi:",
+  "hobby_1": "a leggere degli articoli di",
+  "hobby_2": "a passare del tempo su un buon",
+  "hobby_3": "ad ascoltare della",
+
+  "_projects_component": "PROJECTS",
+  "portfolio": "Il mio portfolio",
+  "portfolio_desc": "Portfolio che racchiude i miei progetti e le mie informazioni.",
+  "bsample_desc": "Piattaforma rivolta ai produttori musicali, per cercare ispirazione, nuovi sample e per poterli scaricare e utilizzare nelle proprie produzioni.",
+  "nutrition_studio": "Studio Professionale di Nutrizione | Gaspa - Micheli",
+  "nutrition_studio_desc": "Sito vetrina per un ipotetico studio di nutrizione. In questo caso vengono riportate le informazioni del nutrizionista che attualmente mi segue.",
+  "weather_app_desc": "Neon Weather è una webapp per il meteo che riprende il tema Cyberpunk e sfrutta le API di OpenWeather.",
+
+  "_contacts_component": "CONTACTS",
+  "contacts": "Contatti",
+
+  "_utils": "UTILITY",
+  "fe_dev": "Front End Developer",
+  "from": "presso",
+  "epicode": "Epicode",
+  "util_hobby_1": "tecnologia",
+  "util_hobby_2": "videogame",
+  "util_hobby_3": "musica"
 }

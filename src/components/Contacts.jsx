@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import { getPageMeta } from '../utils/metaUtils';
 import { useLocation } from "react-router-dom";
 
-export const Contacts = ({ setcliCkedLink }) => {
+export const Contacts = ({ t }) => {
   const location = useLocation();
   const pageMeta = getPageMeta(location.pathname);
 
@@ -96,7 +96,7 @@ export const Contacts = ({ setcliCkedLink }) => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           className="text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left text-purple-600 dark:text-neutral-100 mb-8 md:mb-16"
         >
-          Contatti
+          {t('contacts')}
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="justify-self-center md:justify-self-start">
@@ -155,7 +155,7 @@ export const Contacts = ({ setcliCkedLink }) => {
                 download="CV_Emanuele_Macchiarulo"
                 className="flex justify-center w-full bg-purple-600 text-neutral-50 rounded-xl lg:text-lg py-2 px-4 hover:scale-110 duration-300"
               >
-                Scarica il mio CV!
+                {t('download_cv')}
               </a>
             </motion.div>
           </div>

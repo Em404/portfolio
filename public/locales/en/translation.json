@@ -1,5 +1,43 @@
 {
-  "_navbar-component": "NAVBAR",
+  "_navbar_component": "NAVBAR",
   "theme": "Change theme",
-  "lang": "Change language"
+  "lang": "Change language",
+
+  "_home_component": "HOME",
+  "hi": "Hi",
+  "iam": "I'am",
+  "sequence_2": "lover of technology 💻",
+  "contact_me": "Get in touch!",
+  "download_cv": "Download my CV!",
+
+  "_about_component": "ABOUT",
+  "about_me": "About me",
+  "hi_everyone": "Hi everyone!",
+  "presentation_1": "My name is Emanuele and I am a Front End Developer.",
+  "presentation_2": "I am an IT expert and to consolidate my foundations as a developer I attended the ",
+  "presentation_3": "I consider myself a precise and organized person, with good problem solving skills and able to work both independently and in a group, showing adaptability and flexibility.",
+  "presentation_4": "💭 Always looking for new stimuli and opportunities to grow both as a professional and as a person. 🤝",
+  "presentation_5": "When I'm not writing code you can find me:",
+  "hobby_1": "reading",
+  "hobby_2": "playing",
+  "hobby_3": "listening",
+
+  "_projects_component": "PROJECTS",
+  "portfolio": "My portfolio",
+  "portfolio_desc": "Portfolio containing my projects and information.",
+  "bsample_desc": "Platform for music producers, to look for inspiration, new samples and to be able to download and use them in their own productions.",
+  "nutrition_studio": "Professional Nutrition Studio | Gaspa - Micheli",
+  "nutrition_studio_desc": "Showcase site for a hypothetical nutrition study. In this case the information reported comes from the nutritionist I turned to.",
+  "weather_app_desc": "Neon Weather is a weather web app that takes up the Cyberpunk theme and uses the OpenWeather API.",
+
+  "_contacts_component": "CONTACTS",
+  "contacts": "Contacts",
+
+  "_utils": "UTILITY",
+  "fe_dev": "Front End Developer course",
+  "from": "from",
+  "epicode": "Epicode",
+  "util_hobby_1": "technology articles",
+  "util_hobby_2": "a videogame",
+  "util_hobby_3": "to music"
 }

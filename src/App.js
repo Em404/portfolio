@@ -11,8 +11,8 @@ function App() {
     const savedDarkMode = localStorage.getItem('dark-mode');
     return savedDarkMode ? JSON.parse(savedDarkMode) : false;
   });
-  const [language, setLanguage] = useState('en');
 
+  const [language, setLanguage] = useState('en');
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
@@ -53,6 +53,7 @@ function App() {
                   location={"home"}
                   clickedLink={clickedLink}
                   setcliCkedLink={setcliCkedLink}
+                  t={t}
                 />
               }
             />
@@ -64,6 +65,7 @@ function App() {
                   location={"home"}
                   clickedLink={clickedLink}
                   setcliCkedLink={setcliCkedLink}
+                  t={t}
                 />
               }
             />
@@ -108,6 +110,8 @@ function App() {
                   location={"contacts"}
                   clickedLink={clickedLink}
                   setcliCkedLink={setcliCkedLink}
+                  t={t}
+                  language={language}
                 />
               }
             />
