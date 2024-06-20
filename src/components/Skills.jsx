@@ -13,7 +13,7 @@ import { Helmet } from "react-helmet-async";
 import { getPageMeta } from '../utils/metaUtils';
 import { useLocation } from "react-router-dom";
 
-export const Skills = ({ t }) => {
+export const Skills = () => {
   const location = useLocation();
   const pageMeta = getPageMeta(location.pathname);
 

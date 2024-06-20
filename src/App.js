@@ -12,7 +12,11 @@ function App() {
     return savedDarkMode ? JSON.parse(savedDarkMode) : false;
   });
 
-  const [language, setLanguage] = useState('en');
+  // const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState(() => {
+    const savedLanguage = localStorage.getItem('language');
+    return savedLanguage ? JSON.parse(savedLanguage) : 'en'
+  })
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
@@ -24,6 +28,11 @@ function App() {
   useEffect(() => {
     localStorage.setItem('dark-mode', JSON.stringify(darkMode));
   }, [darkMode]);
+
+  useEffect(() => {
+    i18n.changeLanguage(language);
+    localStorage.setItem('language', JSON.stringify(language));
+  }, [language, i18n]);
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -54,6 +63,7 @@ function App() {
                   clickedLink={clickedLink}
                   setcliCkedLink={setcliCkedLink}
                   t={t}
+                  language={language}
                 />
               }
             />
@@ -66,6 +76,7 @@ function App() {
                   clickedLink={clickedLink}
                   setcliCkedLink={setcliCkedLink}
                   t={t}
+                  language={language}
                 />
               }
             />
@@ -78,6 +89,7 @@ function App() {
                   clickedLink={clickedLink}
                   setcliCkedLink={setcliCkedLink}
                   t={t}
+                  language={language}
                 />
               }
             />
@@ -90,6 +102,7 @@ function App() {
                   clickedLink={clickedLink}
                   setcliCkedLink={setcliCkedLink}
                   t={t}
+                  language={language}
                 />
               }
             />
@@ -102,6 +115,7 @@ function App() {
                   clickedLink={clickedLink}
                   setcliCkedLink={setcliCkedLink}
                   t={t}
+                  language={language}
                 />
               }
             />

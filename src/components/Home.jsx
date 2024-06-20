@@ -220,7 +220,7 @@ export const Home = ({ clickedLink, setcliCkedLink, t, language }) => {
         id="about"
         className="bg-neutral-50 dark:bg-neutral-800 text-neutral-50 flex items-center pt-16 md:h-screen h-custom"
       >
-        <About t={t}/>
+        <About t={t} language={language}/>
       </div>
 
       <div
@@ -228,7 +228,7 @@ export const Home = ({ clickedLink, setcliCkedLink, t, language }) => {
         id="skills"
         className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 flex items-center h-[100vh] h-custom"
       >
-        <Skills t={t}/>
+        <Skills t={t} language={language}/>
       </div>
 
       <div
@@ -236,7 +236,7 @@ export const Home = ({ clickedLink, setcliCkedLink, t, language }) => {
         id="projects"
         className="bg-neutral-50 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-50 flex items-center"
       >
-        <Projects t={t}/>
+        <Projects t={t} language={language}/>
       </div>
 
       <div
@@ -244,7 +244,7 @@ export const Home = ({ clickedLink, setcliCkedLink, t, language }) => {
         id="contacts"
         className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-100 flex items-center h-[90vh]"
       >
-        <Contacts t={t}/>
+        <Contacts t={t} language={language}/>
       </div>
 
       <div className="bg-purple-600 text-neutral-100 dark:bg-neutral-800 dark:text-neutral-100 flex items-center justify-center h-[10vh] py-8">
