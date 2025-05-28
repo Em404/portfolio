@@ -7,7 +7,7 @@ import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import resume from "../docs/Emanuele_Front End Developer_CV.pdf";
+import resume from "../docs/CV_Emanuele_Macchiarulo.pdf";
 import mac from "../img/mac.png";
 import { Helmet } from "react-helmet-async";
 import { getPageMeta } from '../utils/metaUtils';
@@ -26,8 +26,13 @@ export const Home = ({ clickedLink, setcliCkedLink, t, language }) => {
   };
 
   useEffect(() => {
+    const path = location.pathname === "/" ? "Home" : location.pathname.slice(1).charAt(0).toUpperCase() + location.pathname.slice(2);
+    setcliCkedLink(path);
+  }, [location]);
+
+  useEffect(() => {
     if (clickedLink) {
-      setcliCkedLink(false);
+      // setcliCkedLink(false);
       switch (location.pathname) {
         case "/":
           scrollToSection(homeRef);
@@ -139,7 +144,7 @@ export const Home = ({ clickedLink, setcliCkedLink, t, language }) => {
                   ref={contactsRef}
                   id="contatti"
                 >
-                  <Link to="/contacts" onClick={() => setcliCkedLink(true)}>
+                  <Link to="/contacts" onClick={() => setcliCkedLink("Contatti")}>
                     {t("contact_me")}
                   </Link>
                 </button>

@@ -126,7 +126,7 @@ export const Skills = () => {
                 <img
                   src={icon.icon}
                   alt={icon.name}
-                  className="w-12 lg:w-16 h-12 lg:h-16"
+                  className="w-12 lg:w-16 h-12 lg:h-16 hover:-translate-y-2 transition-transform duration-300"
                 />
                 <h3 className="mt-2 font-semibold md:text-lg">{icon.name}</h3>
               </motion.div>

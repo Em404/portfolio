@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { motion } from "framer-motion";
-import resume from "../docs/Emanuele_Front End Developer_CV.pdf";
+import resume from "../docs/CV_Emanuele_Macchiarulo.pdf";
 import { Helmet } from "react-helmet-async";
 import { getPageMeta } from '../utils/metaUtils';
 import { useLocation } from "react-router-dom";

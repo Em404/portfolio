@@ -6,7 +6,8 @@ import { Home } from "./components/Home";
 import { useTranslation } from 'react-i18next';
 
 function App() {
-  const [clickedLink, setcliCkedLink] = useState(false);
+  const [clickedLink, setcliCkedLink] = useState("Home");
+
 
   // Dark mode state
   const [darkMode, setDarkMode] = useState(() => {
@@ -47,7 +48,7 @@ function App() {
       <div className={`${darkMode && "dark"}`}>
         <Router>
           <div className="fixed top-0 w-full z-50">
-            <Navbar darkMode={darkMode} handleDarkMode={handleDarkMode} setcliCkedLink={setcliCkedLink} language={language} changeLanguage={changeLanguage} t={t}/>
+            <Navbar darkMode={darkMode} handleDarkMode={handleDarkMode} setcliCkedLink={setcliCkedLink} clickedLink={clickedLink} language={language} changeLanguage={changeLanguage} t={t}/>
           </div>
           <Routes>
             <Route exact path="/" element={<Home location={"home"} clickedLink={clickedLink} setcliCkedLink={setcliCkedLink} t={t} language={language}/>}/>
